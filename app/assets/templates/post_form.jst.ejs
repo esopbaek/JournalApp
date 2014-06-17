@@ -1,0 +1,12 @@
+<% var title =  this.model.isNew() ? "Add" : "Edit" %>
+<%= errors %>
+<h1><%= title %> Post</h1>
+<form>
+  <label for="post_title">Title</label>
+  <input id="post_title" type="text" name="post[title]" value="<%= this.model.get('title') %>">
+  
+  <label for="post_body">Body</label>
+  <input id="post_body" type="textarea" name="post[body]" value="<%= this.model.get('body') %>">
+  
+  <button>Submit</button>
+</form>

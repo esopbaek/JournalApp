@@ -1,0 +1,9 @@
+<h1>Posts</h1>
+<% models.forEach(function(post){ %>
+  <a href="#/posts/<%= post.id %>"><%= post.get('title') %></a>
+  <button class="remove" data-id="<%= post.id %>">Remove</button>
+  <br>
+<% }); %>
+
+<a href="#/posts/new">AddPost</a>
+
